@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Sight Services - Professional Financial & Tax Advisory Services</title>
+    <meta name="description" content="Professional financial services including accounting, tax planning, business development, and compliance management. Expert guidance for individuals and businesses.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Focus Sight Services - Professional Financial Advisory">
+    <meta property="og:description" content="Expert financial services including accounting, tax planning, and business development solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://focussightservices.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="flex items-center">
+                <img src="./images/focus_service_logo.png" alt="Focus Sight Services Logo" class="nav-logo">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <button class="nav-link" onclick="scrollToSection('home')">Home</button>
+                <button class="nav-link" onclick="scrollToSection('services')">Services</button>
+                <button class="nav-link" onclick="scrollToSection('about')">About</button>
+                <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
+                <a href="tel:2243869218" class="btn btn-secondary flex items-center">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu">
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu-content" id="mobileMenuContent">
+        <button class="close-button" onclick="closeMobileMenu()">×</button>
+        <div class="mobile-menu-links">
+            <button class="mobile-menu-link" onclick="scrollToSection('home'); closeMobileMenu();">Home</button>
+            <button class="mobile-menu-link" onclick="scrollToSection('services'); closeMobileMenu();">Services</button>
+            <button class="mobile-menu-link" onclick="scrollToSection('about'); closeMobileMenu();">About</button>
+            <button class="mobile-menu-link" onclick="scrollToSection('contact'); closeMobileMenu();">Contact</button>
+            <a href="tel:2243869218" class="btn btn-secondary flex items-center mt-4">
+                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-brand-primary pt-32 pb-20 overflow-hidden">
+        <div class="relative z-10 container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+                        Professional Financial Services
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-md font-medium">
+                        Navigate complex financial landscapes with confidence. Our professional team delivers comprehensive accounting, tax, and business development solutions tailored to your unique needs.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="scrollToSection('contact')" class="btn btn-primary bg-white text-brand-primary hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-lg">
+                            Schedule Consultation
+                        </button>
+                        <button onclick="scrollToSection('services')" class="btn btn-outline-white px-8 py-4 text-lg font-bold shadow-lg">
+                            Our Services
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Professional business consultation meeting" class="rounded-2xl shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-brand-primary mb-4">Our Professional Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive financial solutions designed to help individuals and businesses achieve their goals with expert guidance and strategic insights.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Accounting Services -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="bg-brand-primary text-white p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="calculator" class="text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">Accounting Services</h3>
+                        <p class="text-gray-600 mb-6">Professional bookkeeping, financial statement preparation, and accounting system setup to keep your finances organized and compliant.</p>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Monthly Financial Statements
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Bookkeeping & Reconciliation
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Payroll Processing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Business Development -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="bg-brand-primary text-white p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="rocket" class="text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">Business Development</h3>
+                        <p class="text-gray-600 mb-6">Strategic planning, growth analysis, and business advisory services to help scale your operations and maximize profitability.</p>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Strategic Planning
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Financial Forecasting
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Growth Strategy
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tax Services -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="bg-brand-primary text-white p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="file-text" class="text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">Tax Services</h3>
+                        <p class="text-gray-600 mb-6">Expert tax preparation, planning, and optimization strategies for individuals and businesses to minimize liability and maximize returns.</p>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Individual Tax Returns
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Business Tax Planning
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                IRS Representation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Compliance & Risk -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="bg-brand-primary text-white p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">Compliance & Risk</h3>
+                        <p class="text-gray-600 mb-6">Comprehensive compliance monitoring and risk assessment services to protect your business from regulatory issues and financial exposure.</p>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Regulatory Compliance
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Risk Assessment
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check-circle" class="text-brand-secondary mr-2 w-4 h-4"></i>
+                                Internal Controls
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="./images/focus_sight_services.png" alt="Professional financial advisors in consultation meeting" class="rounded-2xl shadow-lg w-full">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-brand-primary mb-6">Expert Financial Guidance You Can Trust</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        With decades of combined experience in financial advisory, tax planning, and business development, Focus Sight Services has established itself as a trusted partner for individuals and businesses seeking comprehensive financial solutions.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our team of certified professionals brings deep expertise across accounting, taxation, compliance, and strategic business planning, ensuring you receive the highest quality service and personalized attention.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">15+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">500+</div>
+                            <div class="text-gray-600">Satisfied Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">98%</div>
+                            <div class="text-gray-600">Client Retention</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">24/7</div>
+                            <div class="text-gray-600">Support Available</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('contact')" class="btn btn-secondary px-8 py-3 font-semibold">
+                            Schedule Meeting
+                        </button>
+                        <a href="tel:2243869218" class="btn btn-outline px-8 py-3 font-semibold flex items-center justify-center">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                            224-386-9218
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-brand-primary mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600">
+                    Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">
+                            "Focus Sight Services transformed our business financial management. Their expertise in tax planning saved us thousands and their business development guidance helped us scale efficiently."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold">
+                                SM
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-brand-primary">Sarah Mitchell</h4>
+                                <p class="text-gray-500 text-sm">CEO, TechStart Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">
+                            "Professional, reliable, and incredibly knowledgeable. The team at Focus Sight Services made tax season stress-free and helped us implement better accounting practices."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold">
+                                DR
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-brand-primary">David Rodriguez</h4>
+                                <p class="text-gray-500 text-sm">Owner, Rodriguez Construction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">
+                            "Their compliance and risk management services gave us peace of mind. We know we're protected and following all regulations while focusing on growing our business."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold">
+                                LT
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-brand-primary">Lisa Thompson</h4>
+                                <p class="text-gray-500 text-sm">CFO, Healthcare Partners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-brand-primary mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to take control of your finances? Contact us today to schedule a consultation and discover how we can help you achieve your financial goals.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-primary mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-brand-primary text-white p-3 rounded-lg">
+                                <i data-lucide="phone" class="text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-primary mb-1">Phone</h4>
+                                <a href="tel:2243869218" class="text-gray-600 hover:text-brand-primary transition-colors text-lg">
+                                    (224) 386-9218
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-brand-primary text-white p-3 rounded-lg">
+                                <i data-lucide="mail" class="text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-primary mb-1">Email</h4>
+                                <a href="mailto:focussightservices@gmail.com" class="text-gray-600 hover:text-brand-primary transition-colors text-lg">
+                                    focussightservices@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-brand-primary text-white p-3 rounded-lg">
+                                <i data-lucide="clock" class="text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-brand-primary mb-1">Business Hours</h4>
+                                <div class="text-gray-600">
+                                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                                    <p>Sunday: By Appointment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="card shadow-lg">
+                    <div class="card-content">
+                        <h3 class="text-2xl font-bold text-brand-primary mb-6">Schedule a Consultation</h3>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div id="formMessage"></div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                    <div class="form-error" id="firstNameError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                    <div class="form-error" id="lastNameError"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <div class="form-error" id="emailError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                                <div class="form-error" id="phoneError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service Interest *</label>
+                                <select id="service" name="service" class="form-select" required>
+                                    <option value="">Select a Service</option>
+                                    <option value="accounting">Accounting Services</option>
+                                    <option value="business-development">Business Development</option>
+                                    <option value="tax-services">Tax Services</option>
+                                    <option value="compliance-risk">Compliance & Risk Management</option>
+                                    <option value="all">All Services</option>
+                                </select>
+                                <div class="form-error" id="serviceError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your financial needs and goals..."></textarea>
+                                <div class="form-error" id="messageError"></div>
+                            </div>
+                            
+                            <button type="submit" id="submitButton" class="btn btn-secondary w-full py-4 px-6 text-lg font-semibold">
+                                Schedule Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-primary text-white py-16">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="./images/focus_service_logo.png" alt="Focus Sight Services Logo" class="h-8 w-auto filter brightness-0 invert">
+                        <div class="ml-3">
+                            <h1 class="text-lg font-bold text-white">FOCUS</h1>
+                            <p class="text-sm text-red-400 font-medium">SIGHT SERVICES</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 mb-6 max-w-md">
+                        Your trusted partner for comprehensive financial and tax advisory services. We help individuals and businesses achieve their financial goals with expert guidance and personalized solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white bg-opacity-20 p-3 rounded-lg hover:bg-opacity-30 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-white bg-opacity-20 p-3 rounded-lg hover:bg-opacity-30 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-white bg-opacity-20 p-3 rounded-lg hover:bg-opacity-30 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-4 text-blue-100">
+                        <li>
+                            <button onclick="scrollToSection('services')" class="hover:text-white transition-colors text-left">
+                                Accounting Services
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('services')" class="hover:text-white transition-colors text-left">
+                                Business Development
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('services')" class="hover:text-white transition-colors text-left">
+                                Tax Services
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('services')" class="hover:text-white transition-colors text-left">
+                                Compliance & Risk
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-blue-100">
+                        <li>
+                            <a href="tel:2243869218" class="hover:text-white transition-colors flex items-center">
+                                <i data-lucide="phone" class="mr-3 w-4 h-4"></i>
+                                (224) 386-9218
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:focussightservices@gmail.com" class="hover:text-white transition-colors flex items-center">
+                                <i data-lucide="mail" class="mr-3 w-4 h-4"></i>
+                                focussightservices@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="clock" class="mr-3 mt-1 w-4 h-4"></i>
+                            <div>
+                                <div>Mon-Fri: 9AM-6PM</div>
+                                <div>Sat: 10AM-2PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-100">
+                <p>&copy; 2024 Focus Sight Services. All rights reserved. | Professional Financial & Tax Advisory Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="tel:2243869218" class="btn btn-secondary px-6 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2 font-medium">
+            <i data-lucide="phone" class="w-5 h-5 animate-pulse"></i>
+            <span class="hidden sm:inline">Call for Consultation</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
